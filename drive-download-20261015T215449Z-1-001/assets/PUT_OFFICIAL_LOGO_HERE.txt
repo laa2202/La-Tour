@@ -1,1 +1,0 @@
-Place the official Crown & Dagger transparent lion logo at assets/cd-logo.png. The site displays a typographic C&D fallback until then. Do not use a recreated lion if the original is available.
