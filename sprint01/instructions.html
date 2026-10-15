@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0a0a"><title>SPRINT 01 — Analyst Instructions | LA TOUR</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+:root{--paper:#f6f5f1;--ink:#141414;--gold:#b39662}
+body{background:var(--paper)}.instructions-hero{background:#0a0a0a;color:#f9f7f2;padding:72px 0 66px}
+.instructions-hero h1{font:500 clamp(65px,10vw,134px)/.88 'Cormorant Garamond',Georgia,serif;letter-spacing:-.035em;margin:28px 0 24px}
+.instructions-hero h1 span{color:var(--gold)}.lead{font-size:19px;max-width:690px;color:#c9c4bb}
+.meta-strip{display:flex;flex-wrap:wrap;gap:15px 35px;margin-top:40px;font:11px 'DM Mono',monospace;letter-spacing:.04em;color:#d1c4b0}
+.meta-strip strong{display:block;color:white;font:600 15px 'DM Sans',sans-serif;margin-top:8px;letter-spacing:0}
+.instruction-layout{display:grid;grid-template-columns:215px minmax(0,1fr);gap:66px;align-items:start;padding-top:72px}
+.side{position:sticky;top:112px;border-top:2px solid #b39662;padding-top:20px}.side strong{display:block;font:10px 'DM Mono',monospace;color:#927343;letter-spacing:.13em;margin-bottom:17px}
+.side a{display:block;font-size:12px;padding:10px 0;border-bottom:1px solid #dedbd3;color:#54504c}.side a:hover{color:#9e793e}
+.content section{padding-bottom:62px;margin-bottom:64px;border-bottom:1px solid #d9d6d0;scroll-margin-top:115px}
+.kicker{font:11px 'DM Mono',monospace;color:#9b7845;letter-spacing:.16em}
+.content h2{font:500 clamp(43px,5vw,68px)/1 'Cormorant Garamond',Georgia,serif;letter-spacing:-.024em;margin:12px 0 26px}
+.content h3{font:600 29px 'Cormorant Garamond',Georgia,serif;margin:36px 0 12px}
+.content p,.content li{color:#4b4843;line-height:1.72;font-size:15px}.content p{margin:12px 0 20px}
+.content ol,.content ul{padding-left:24px}.content li{margin:9px 0}
+.content table{width:100%;border-collapse:collapse;margin:24px 0;font-size:13px}
+.content th{text-align:left;background:#121212;color:#eee8dd;padding:13px}
+.content td{padding:13px;border-bottom:1px solid #d9d6d0}
+.content pre{white-space:pre;overflow-x:auto;background:#121212;color:#eee8dd;padding:23px;border-left:3px solid var(--gold);border-radius:2px;font:12px/1.8 'DM Mono',monospace}
+.content :not(pre)>code{background:#e7e3da;padding:2px 5px;font-size:.89em;overflow-wrap:anywhere}
+.note{background:#eeeae2;border-left:3px solid var(--gold);padding:19px 23px;margin:25px 0;color:#423e38;line-height:1.65}
+.deliverable{background:#121212;color:#dac5a1;padding:19px 23px;margin:22px 0;font:11px 'DM Mono',monospace;letter-spacing:.06em;overflow-wrap:anywhere}
+.deliverable code{display:block;font-size:15px;color:#fff;margin-top:8px}
+.deliverable small{display:block;color:#beb9b0;font-size:11px;margin-top:8px}
+.names{font:11px 'DM Mono',monospace;color:#987948;display:block;margin-top:8px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:30px 0}
+.team-card{background:#121212;color:#f4f1eb;padding:21px;border-top:3px solid #b39662}
+.team-card small{display:block;font:10px 'DM Mono',monospace;color:#c8ad7a}.team-card strong{display:block;font:23px 'Cormorant Garamond',serif;margin:14px 0 8px}.team-card span{font-size:12px;color:#c6c0b7}
+.toplink{font:11px 'DM Mono',monospace;color:#c8b692;display:inline-block;margin-top:24px}
+.last{background:#eae5d9;padding:22px 26px;margin:32px 0 70px}
+@media(max-width:850px){.instruction-layout{display:block;padding-top:35px}.side{position:relative;top:auto;margin-bottom:55px}.side a{display:inline-block;margin-right:18px}.team-grid{grid-template-columns:1fr}}
+</style></head><body>
+<header class="site-header"><div class="wrap header-row"><a class="brand" href="../index.html"><img class="lion" src="../assets/cd-logo.png" alt=""><span>CROWN <em>&amp;</em> DAGGER <small>QUANT POD / LA TOUR</small></span></a><nav><a href="../index.html">← HOME</a><a href="../lectures/02-sprint-walkthrough.html">WALKTHROUGH ↗</a></nav></div></header>
+<div class="instructions-hero"><div class="wrap"><div class="eyebrow">LA TOUR / QUANT RESEARCH <span class="line"></span> FALL 2026</div>
+<h1>SPRINT <span>01.</span></h1><p class="lead">Analyst assignment &amp; instructions. From price data to trading signals, backtesting, portfolio risk, and a defensible research decision.</p>
+<div class="meta-strip"><div>FINAL DEADLINE<strong>Sunday, October 25, 2026</strong></div><div>CO-PMS<strong>Leen &amp; Jana</strong></div><div>STRATEGY<strong>Time-Series Momentum</strong></div><div>FINAL OUTPUT<strong>Code · CSV · Memo · 6 Slides</strong></div></div>
+</div></div>
+<div class="wrap instruction-layout"><aside class="side"><strong>TABLE OF CONTENTS</strong>
+<a href="#objective">MISSION</a><a href="#step-01">01 / STRATEGY</a><a href="#step-02">02 / SETUP</a><a href="#step-03">03 / BASELINE</a><a href="#step-04">04 / TEAM RESEARCH</a><a href="#step-05">05 / VALIDATION</a><a href="#step-06">06 / DELIVERABLES</a><a href="#step-07">07 / RESEARCH DEFENSE</a><a href="#standards">RESEARCH STANDARDS</a>
+</aside><main class="content">
+<section id="objective"><div class="kicker">THE MANDATE</div><h2>Your objective.</h2>
+<p>This week, investigate whether a systematic trend-following strategy can produce useful investment signals across four financial markets. Learn to retrieve market data, calculate signals, simulate historical performance, identify weaknesses, and defend a research recommendation.</p>
+<p><strong>Success means credible, reproducible research — not the highest possible historical return.</strong> Every group starts from the same baseline and investigates a different question.</p>
+<div class="team-grid"><div class="team-card"><small>TEAM / A</small><strong>Signal Research</strong><span>Cooper · Kaka · Ken</span></div><div class="team-card"><small>TEAM / B</small><strong>Backtesting &amp; Validation</strong><span>Kai · Jonas</span></div><div class="team-card"><small>TEAM / C</small><strong>Portfolio Risk</strong><span>Leen · Jana</span></div></div></section>
+<section id="step-01"><div class="kicker">STEP / 01</div><h2>Understand the Strategy.</h2>
+<h3>What are we researching?</h3>
+<p>We are testing a simplified version of <em>Time Series Momentum</em> (Moskowitz, Ooi and Pedersen, 2012): whether past positive price trends contain useful information about future market behavior. Our task is to investigate the evidence, not assume the hypothesis works.</p>
+<table><thead><tr><th>ETF</th><th>Market exposure</th></tr></thead><tbody><tr><td>SPY</td><td>U.S. equities</td></tr><tr><td>IEF</td><td>Intermediate U.S. Treasury bonds</td></tr><tr><td>GLD</td><td>Gold</td></tr><tr><td>UUP</td><td>U.S. dollar</td></tr></tbody></table>
+<h3>How the baseline works</h3>
+<p>Each month, look at each ETF's return over the previous <strong>252 common trading days</strong>, using information available as of the previous close. If its trailing return is positive, target a <strong>25% allocation</strong>; otherwise target <strong>0%</strong>. Unallocated money stays in cash.</p>
+<div class="note"><strong>Example:</strong> If SPY and GLD have positive signals and IEF and UUP have negative signals, allocate 25% to SPY, 25% to GLD and 50% to cash.</div>
+<p>The baseline rebalances monthly, charges <strong>5 basis points × absolute portfolio weight turnover</strong>, assumes cash earns 0%, and does not permit shorts or leverage. The previous-close execution convention is a simplified, non-executable research assumption.</p>
+<h3>What is a signal?</h3><p>A signal is a rule-derived indicator that informs an allocation: positive trend → eligible for a long allocation; non-positive trend → no ETF allocation. A negative trend is not a short sale in this exercise.</p>
+</section><section id="step-02"><div class="kicker">STEP / 02</div><h2>Set Up Your Environment.</h2>
+<p>Every analyst must install and run the reference implementation before changing the research code.</p>
+<h3>2.1 Clone the repository</h3><pre><code>git clone https://github.com/laa2202/La-Tour.git
+cd La-Tour/sprint01</code></pre>
+<h3>2.2 Create a Python environment</h3><pre><code>python3 -m venv .venv
+source .venv/bin/activate</code></pre><p>Windows users should use the activation command appropriate for their terminal. The environment isolates project dependencies.</p>
+<h3>2.3 Install dependencies</h3><pre><code>pip install -r requirements.txt</code></pre>
+<h3>2.4 Download the price data</h3><pre><code>python src/download_data.py</code></pre>
+<p>The intended dataset contains adjusted daily closing prices from January 1, 2010 through October 9, 2026 (subject to actual availability), with the columns <code>date,ticker,adj_close</code>. Inspect the observations for missing dates, duplicate rows, and instrument coverage.</p>
+<h3>2.5 Verify a shared dataset</h3><pre><code>shasum -a 256 data/prices.csv</code></pre>
+<p>Record the source, download timestamp, date coverage, and SHA-256 checksum. All teams must use the same frozen version approved by the Co-PMs.</p>
+<h3>2.6 Run the baseline</h3><pre><code>python src/backtest.py --input data/prices.csv --output results/base.csv</code></pre>
+<h3>2.7 Run tests</h3><pre><code>python -m unittest discover -s tests -v</code></pre>
+<h3>2.8 If price downloads fail</h3><pre><code>python src/generate_synthetic_fixture.py
+python src/backtest.py --input data/SYNTHETIC_TEST_ONLY_prices.csv --output results/TEST_ONLY.csv</code></pre>
+<p>The synthetic fixture is only for checking that code runs, <strong>not</strong> for evaluating real-world strategy performance. Contact the Co-PMs for the frozen real dataset.</p>
+</section><section id="step-03"><div class="kicker">STEP / 03</div><h2>Reproduce the Baseline.</h2>
+<p>Before beginning team extensions, every analyst should open <code>src/backtest.py</code> and trace the program from historical price data to portfolio performance.</p>
+<ol><li>Locate how historical prices are read and validated.</li><li>Find the calculation of daily and trailing returns.</li><li>Explain how the 252-day return becomes a momentum signal.</li><li>Identify how each signal maps to a 25% or 0% target weight.</li><li>Find the monthly rebalance logic, portfolio return calculation, and transaction-cost deduction.</li><li>Explain why previous-close execution in the reference simulation is not a feasible live fill assumption.</li></ol>
+<div class="note"><strong>Required checkpoint:</strong> Choose at least one historical rebalance date and explain the observations used, resulting signals, target weights, and subsequent simulated returns. You must understand the reference before modifying it.</div>
+</section><section id="step-04"><div class="kicker">STEP / 04</div><h2>Complete Your Assigned Research.</h2>
+<h3>Team A / Signal Research <span class="names">Cooper · Kaka · Ken</span></h3>
+<p><strong>Research question:</strong> How does the momentum lookback window affect signal behavior?</p>
+<ol><li>Reproduce the original 252-day signal.</li><li>Calculate alternative 63- and 126-day trailing-return signals.</li><li>Compare the three horizons across the four ETFs and historical periods.</li><li>Measure signal stability and switching frequency; consider speed versus noise.</li><li>Investigate whether apparent improvements are robust without selecting parameters using held-out test results.</li><li>Recommend a horizon for further research, or explain why the evidence is inconclusive.</li></ol>
+<p>Ask: Which horizon switches most frequently? Do conclusions change across assets or market regimes? What happens when turnover costs are considered?</p>
+<div class="deliverable">REQUIRED FILE <code>results/team_a_signals.csv</code><small>Columns: date,ticker,signal,lookback</small></div>
+<p>Define the signal values and their timestamps. Negative signals map to cash rather than short positions in the baseline.</p>
+
+<h3>Team B / Backtesting &amp; Validation <span class="names">Kai · Jonas</span></h3>
+<p><strong>Research question:</strong> Can we trust the baseline's reported historical performance?</p>
+<ol><li>Reproduce baseline results independently.</li><li>Audit signal timing, rebalance timing, return alignment, and look-ahead bias.</li><li>Calculate CAGR, annualized volatility, Sharpe ratio, maximum drawdown, and turnover.</li><li>Compare cumulative portfolio performance and drawdowns against the supplied benchmark.</li><li>Examine transaction costs and unrealistic assumptions about trade execution.</li><li>Identify which reported results are credible and which need corrections before further use.</li></ol>
+<p>Know your metrics: CAGR measures compounded annual growth; volatility measures return variation; Sharpe relates excess return to volatility (state your risk-free convention); maximum drawdown is the largest peak-to-trough loss; turnover measures changing positions.</p>
+<div class="deliverable">REQUIRED FILE <code>results/team_b_metrics.csv</code><small>Columns: sample,strategy,cagr,volatility,sharpe,max_drawdown,turnover</small></div>
+<p>The reference comparison uses a cost-free constant-weight benchmark, unlike the cost-charged baseline. Explain that mismatch.</p>
+
+<h3>Team C / Portfolio Risk <span class="names">Leen · Jana</span></h3>
+<p><strong>Research question:</strong> Can volatility-aware sizing improve the portfolio's risk profile?</p>
+<ol><li>Reproduce the equal-25%-per-positive-signal baseline weights.</li><li>Estimate trailing 63-trading-day volatility for each ETF using data available before trading.</li><li>Specify inverse-volatility weighting or a capped risk-targeting approach.</li><li>Explain normalization, caps, cash allocation, and what happens when an asset's signal switches off.</li><li>Compare exposure, concentration, turnover, estimated trading costs, and drawdowns where the alternative has been backtested appropriately.</li><li>Discuss whether the approach merits further research and what can go wrong (e.g., unstable estimates or excessive concentration).</li></ol>
+<div class="deliverable">REQUIRED FILE <code>results/team_c_weights.csv</code><small>Columns: date,ticker,weight</small></div>
+<p>Generating alternative weights alone does <strong>not</strong> constitute a completed portfolio backtest. The reference backtester does not automatically ingest these weights; proper integration requires explicit code changes and tests.</p>
+</section><section id="step-05"><div class="kicker">STEP / 05</div><h2>Validate Your Findings.</h2>
+<p>Use chronological data rather than randomly intermixing past and future observations.</p>
+<table><thead><tr><th>Sample</th><th>Period</th><th>Purpose</th></tr></thead><tbody><tr><td>Training</td><td>2010–2020</td><td>Develop hypotheses and candidate models</td></tr><tr><td>Validation</td><td>2021–2023</td><td>Compare proposed approaches</td></tr><tr><td>Held-out test</td><td>2024–Oct 9, 2026</td><td>Evaluate selected methods once</td></tr></tbody></table>
+<p>Adjust for ETF inception dates and actual data coverage. Never select parameters by optimizing against the held-out test. If you revise the strategy after seeing held-out results, disclose that the test has been contaminated.</p>
+<ol><li>Prevent look-ahead: no future information may influence a past trade decision.</li><li>Distinguish the original reference strategy from proposed variations.</li><li>Record dataset provenance, checksum, assumptions, and experiment date.</li><li>Include transaction costs, benchmark limitations, exposure, and drawdowns.</li><li>Document failure cases and whether conclusions remain robust across periods.</li></ol>
+</section><section id="step-06"><div class="kicker">STEP / 06</div><h2>Prepare Your Final Deliverables.</h2>
+<p>Submit all materials by <strong>Sunday, October 25, 2026</strong>.</p>
+<ol><li><strong>Reproducible Python code:</strong> scripts and the commands another analyst must run.</li><li><strong>Team-specific CSV:</strong> the required file with exactly the specified header.</li><li><strong>Research memo:</strong> question, intuition, dataset/checksum, assumptions, implementation, evidence, robustness checks, limitations, and final recommendation.</li><li><strong>Visualizations:</strong> performance or diagnostic figures with labeled dates, axes, and units.</li><li><strong>Six-slide presentation:</strong> summarize what was tested, found, and learned.</li><li><strong>Recommendation:</strong> choose <em>reject</em>, <em>continue research</em>, or <em>requires further validation</em>, with supporting evidence.</li></ol>
+</section><section id="step-07"><div class="kicker">STEP / 07</div><h2>Research Defense.</h2>
+<p>Each team presents for <strong>8 minutes</strong> followed by <strong>4 minutes of Q&amp;A</strong>.</p>
+<table><thead><tr><th>Slide</th><th>What to cover</th></tr></thead><tbody>
+<tr><td>1 · Hypothesis</td><td>What are we testing, and why might it work?</td></tr>
+<tr><td>2 · Data</td><td>What data did we use, and what are its limitations?</td></tr>
+<tr><td>3 · Method</td><td>How does the algorithm or research procedure work?</td></tr>
+<tr><td>4 · Results</td><td>What happened? Include quantitative comparisons.</td></tr>
+<tr><td>5 · Robustness</td><td>Which assumptions, costs, and failure cases challenge the findings?</td></tr>
+<tr><td>6 · Decision</td><td>Reject, continue, or validate further — and why?</td></tr>
+</tbody></table>
+<p>Every member should understand the team's full methodology, not only the portion they coded. Be prepared to explain equations, choices, and limitations in Q&amp;A.</p>
+</section><section id="standards"><div class="kicker">LA TOUR / RESEARCH PRINCIPLES</div><h2>Research standards.</h2>
+<p>We value methodological rigor over attractive backtested returns. Every result must be reproducible, transparent, and evidence-based. Disclose weaknesses, unrealistic assumptions, parameter sensitivity, and possible sources of bias.</p>
+<div class="last"><strong>A negative result supported by rigorous analysis is a successful research outcome.</strong><p>No strategies are authorized for live capital deployment during Sprint 01.</p></div>
+<a href="../index.html" class="toplink">← RETURN TO LA TOUR</a></section></main></div>
+<footer class="wrap"><span>CROWN &amp; DAGGER / LA TOUR</span><span>FALL 2026 · SPRINT 01</span></footer>
+</body></html>
