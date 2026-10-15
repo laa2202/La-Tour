@@ -42,6 +42,3 @@ The Co-PMs freeze `data/prices.csv`, date range, input schema and baseline rules
 ## Readings
 - Moskowitz, Ooi & Pedersen (2012), *Time Series Momentum*: https://www.aqr.com/Insights/Research/Journal-Article/Time-Series-Momentum
 - Original paper sample return data (separate from our ETF prices): https://www.aqr.com/Insights/Datasets/Time-Series-Momentum-Original-Paper-Data
-
-## Risk note
-Do not expose the fund's positions, API keys, private datasets or internal models in a public Pages repository. Run internal code in a private GitHub repository. Use the branded website only for public/nonproprietary presentations.
