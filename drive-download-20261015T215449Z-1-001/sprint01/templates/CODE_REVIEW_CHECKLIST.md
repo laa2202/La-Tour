@@ -1,0 +1,11 @@
+# Co-PM acceptance checklist
+- [ ] Same real input file and recorded SHA-256
+- [ ] No accidental use of `SYNTHETIC_TEST_ONLY` prices in result slides
+- [ ] No lookahead: predictors timestamped and signal delayed to achievable trading time
+- [ ] Missing values and instrument inception recorded
+- [ ] Strategy outputs regenerate from a clean checkout
+- [ ] Fees, turnover and benchmark definitions explicit
+- [ ] Train / validation / held-out test split respected
+- [ ] No data snooping or parameter selection on final test
+- [ ] No live trades proposed before separate portfolio/risk approval
+- [ ] At least one analyst not authoring change reviewed its code
